@@ -18,10 +18,12 @@ public class DestroyGoggle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Goggle"))
         {
             Debug.Log("Goggles Distroyed");
-            Destroy(this.gameObject);
+            EventManager.onStepCompleteInvoke();
+            Debug.Log("Step1 Completed");
+            Destroy(other.gameObject);
         }
     }
 

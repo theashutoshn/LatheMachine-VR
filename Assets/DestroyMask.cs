@@ -18,10 +18,12 @@ public class DestroyMask : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Mask"))
         {
             Debug.Log("Mask Distroyed");
-            Destroy(this.gameObject);
+            EventManager.onStepCompleteInvoke();
+            Debug.Log("Step2 Completed");
+            Destroy(other.gameObject);
         }
     }
 }
