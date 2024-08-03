@@ -21,7 +21,7 @@ public class DestroyGoggle : MonoBehaviour
         if (other.gameObject.CompareTag("Goggle"))
         {
             Debug.Log("Goggles Distroyed");
-            EventManager.onStepCompleteInvoke();
+            EventManager.onStepCompleteInvoke(); // when the goggle is destroyed, we are calling the onStepCompleteInvoke method to notify that the step is complete.
             Debug.Log("Step1 Completed");
             Destroy(other.gameObject);
         }
