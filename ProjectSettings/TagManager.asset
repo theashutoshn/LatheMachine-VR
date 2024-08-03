@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mask
   - Goggle
+  - Apron
   layers:
   - Default
   - TransparentFX
