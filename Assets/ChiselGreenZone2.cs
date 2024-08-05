@@ -26,6 +26,8 @@ public class ChiselGreenZone2 : MonoBehaviour
                 woodBlock2.SetActive(false);
                 woodBlock3.SetActive(true);
                 Debug.Log("Wood 2 Changed");
+                EventManager.onStepCompleteInvoke();
+                Debug.Log("Step 7 Completed");
             }
         }
     }

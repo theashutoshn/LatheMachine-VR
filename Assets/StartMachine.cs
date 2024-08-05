@@ -23,18 +23,22 @@ public class StartMachine : GenericSteps
     public GameObject eleventhWood;
     public GameObject firstWoodSocket;
     public GameObject spindle;
-    [SerializeField] private bool isRotating = false;
+    public bool isRotating = false;
     public override void CustomStart()
     {
         pushButton.GetComponent<XRSimpleInteractable>().enabled = true;
         pushButton.GetComponent<XRPokeFilter>().enabled = true;
         pushButton.GetComponent<XRPokeFollowAffordance>().enabled = true;
-        pushButton.GetComponent<XRSimpleInteractable>().selectEntered.AddListener(MachineOn);
+        //pushButton.GetComponent<XRSimpleInteractable>().selectEntered.AddListener(MachineOn);
         Debug.Log("Step 6 Started");
         
     }
 
-    
+    private void OnDisable()
+    {
+        //pushButton.GetComponent<XRSimpleInteractable>().selectEntered.RemoveListener(MachineOn);
+     
+    }
 
     public void Update()
     {
@@ -56,13 +60,23 @@ public class StartMachine : GenericSteps
     }
 
 
-    public void MachineOn(SelectEnterEventArgs args)
+    
+
+    public void RotateWood()
     {
-        Debug.Log("Machine Started");
-        //firstWood.SetActive(false);
-        //firstWoodRotate.SetActive(true);
         isRotating = true;
         EventManager.onStepCompleteInvoke();
         Debug.Log("Step 6 Completed");
+        pushButton.GetComponent<XRSimpleInteractable>().enabled = false;
+        pushButton.GetComponent<XRPokeFilter>().enabled = false;
+        pushButton.GetComponent<XRPokeFollowAffordance>().enabled = false;
     }
+
+    public void NoRotateWoood()
+    {
+        isRotating = false;
+        EventManager.onStepCompleteInvoke();
+        Debug.Log("Step 8 Completed");
+    }
+
 }
