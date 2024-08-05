@@ -24,6 +24,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (currentStepIndex < totalSteps)
+        {
+            steps[currentStepIndex].CustomUpdate();
+        }
+    }
+
+
     void OnDestroy()
     {
         EventManager.onStepComplete -= NextStep;
