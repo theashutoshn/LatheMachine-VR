@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mask
   - Goggle
+  - Apron
+  - FirstWood
   layers:
   - Default
   - TransparentFX

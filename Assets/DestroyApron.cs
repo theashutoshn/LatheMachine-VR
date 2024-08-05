@@ -18,10 +18,12 @@ public class DestroyApron : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Apron"))
         {
             Debug.Log("Apron Distroyed");
-            Destroy(this.gameObject);
+            EventManager.onStepCompleteInvoke();
+            Debug.Log("Step3 Completed");
+            Destroy(other.gameObject);
         }
     }
 }
