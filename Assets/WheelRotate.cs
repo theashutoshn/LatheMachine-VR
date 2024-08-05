@@ -20,9 +20,6 @@ public class WheelRotate : GenericSteps
 
     public override void CustomUpdate()
     {
-        
-
-        Debug.Log("Wheel X Angle: " + wheel.transform.rotation.eulerAngles.x);
         //if(wheel.transform.rotation.eulerAngles.x > 0)
         Vector3 lastPos = new Vector3(-0.18f, 1.8616f, -0.0029f);
         LeanTween.moveLocal(mover, lastPos, 10f);

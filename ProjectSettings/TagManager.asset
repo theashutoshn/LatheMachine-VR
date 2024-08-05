@@ -8,6 +8,9 @@ TagManager:
   - Goggle
   - Apron
   - FirstWood
+  - Chisel1
+  - RightHand
+  - LeftHand
   layers:
   - Default
   - TransparentFX

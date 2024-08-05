@@ -5,24 +5,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonPushStartMachine : MonoBehaviour
 {
-    //private StartMachine startMachine;
-    //void Start()
+    //private void OnCollisionEnter(Collision other)
     //{
-    //    GetComponent<XRSimpleInteractable>().selectEntered.AddListener(StartMachine);
-    //    startMachine = GetComponent<StartMachine>();
-    //    if (startMachine == null)
+    //    if (other.gameObject.CompareTag("LeftHands") || other.gameObject.CompareTag("RightHand"))
     //    {
-    //        Debug.LogError("StartMachine component missing on the object.");
+    //        EventManager.onStepCompleteInvoke();
+    //        Debug.Log("Step 6 Complete");
     //    }
-    //}
-
-    //public void StartMachine(SelectEnterEventArgs args)
-    //{
-    //    if (startMachine != null)
-    //    {
-    //        startMachine.Rotate();
-    //        Debug.Log("Machine Started");
-    //    }
-        
     //}
 }
