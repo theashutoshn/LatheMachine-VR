@@ -884,6 +884,41 @@ Transform:
   - {fileID: 1631544207}
   m_Father: {fileID: 99794084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &379565394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379565395}
+  m_Layer: 0
+  m_Name: 'Lathe Carriage '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379565395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379565394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.103, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3611810241472239427}
+  - {fileID: 4947113998524631694}
+  - {fileID: 6273553225882050470}
+  - {fileID: 6685510176205435343}
+  m_Father: {fileID: 1555682226}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416351498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,12 +1133,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 495621982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2451311a16aaea94c933e7c7a7fdee2f, type: 3}
+  m_Script: {fileID: 11500000, guid: bf76e6f915e24ce4f82b65cd8d17e22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   woodBlock1Socket: {fileID: 1922785049}
   woodBlock2: {fileID: 8743530199210161952}
   FirstWood: {fileID: 919132149545822812}
+  chiselGreenZone2: {fileID: 626819820}
 --- !u!1 &573876373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,14 +1283,14 @@ GameObject:
   - component: {fileID: 626819825}
   - component: {fileID: 626819824}
   - component: {fileID: 626819823}
-  - component: {fileID: 626819822}
+  - component: {fileID: 626819826}
   m_Layer: 0
   m_Name: ChiselGreenZone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &626819821
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,21 +1306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 914186850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &626819822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626819820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2451311a16aaea94c933e7c7a7fdee2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodBlock1Socket: {fileID: 1922785049}
-  woodBlock2: {fileID: 8743530199210161952}
-  FirstWood: {fileID: 919132149545822812}
 --- !u!65 &626819823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1356,6 +1377,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626819820}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &626819826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626819820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abb1ea84c5e4d64fbae8b22820070f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodBlock2: {fileID: 8743530199210161952}
+  woodBlock3: {fileID: 4459800371537168097}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,8 +1746,8 @@ Transform:
   - {fileID: 543450653215797478}
   - {fileID: 1170826995}
   - {fileID: 495621983}
-  - {fileID: 626819821}
   - {fileID: 8222608409718042010}
+  - {fileID: 626819821}
   - {fileID: 3940566538550025307}
   - {fileID: 3830333672030700127}
   - {fileID: 2628109241401354829}
@@ -2416,7 +2451,16 @@ MonoBehaviour:
   steps: 6
   pushButton: {fileID: 4922582552101606905}
   firstWood: {fileID: 919132149545822812}
-  SecondWood: {fileID: 8743530199210161952}
+  secondWood: {fileID: 8743530199210161952}
+  thirdWood: {fileID: 4459800371537168097}
+  fourthWood: {fileID: 4495652919398095077}
+  fifthWood: {fileID: 3401127851730563319}
+  sixthWood: {fileID: 1240141720289527709}
+  seventhWood: {fileID: 3269676938561217205}
+  eightWood: {fileID: 8432648625161055441}
+  ninthWood: {fileID: 6462470432066942760}
+  tenthWood: {fileID: 7392912010211644951}
+  eleventhWood: {fileID: 2044087817409037730}
   firstWoodSocket: {fileID: 1922785049}
   spindle: {fileID: 427394710101984381}
   isRotating: 0
@@ -2602,7 +2646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steps: 7
   chisel1: {fileID: 420052075246049843}
-  chiselGreenZone: {fileID: 495621982}
+  chiselGreenZone1: {fileID: 495621982}
 --- !u!1 &1395451509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,10 +2778,7 @@ Transform:
   - {fileID: 1725506391362363592}
   - {fileID: 8429351210622393106}
   - {fileID: 1331915571553802997}
-  - {fileID: 3611810241472239427}
-  - {fileID: 4947113998524631694}
-  - {fileID: 6273553225882050470}
-  - {fileID: 6685510176205435343}
+  - {fileID: 379565395}
   - {fileID: 2091341186}
   - {fileID: 6186724074389386377}
   - {fileID: 1185664426274567655}
@@ -6680,10 +6721,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.71251076, y: 0.000000040278376, z: -0.70166117, w: 0.000000017502774}
   m_LocalPosition: {x: 0.105956554, y: 1.4434243, z: 0.04465419}
-  m_LocalScale: {x: 107.63143, y: 107.631424, z: 107.63142}
+  m_LocalScale: {x: 107.631424, y: 107.631424, z: 107.63141}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1555682226}
+  m_Father: {fileID: 379565395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3682363896476601545
 MeshFilter:
@@ -7758,10 +7799,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.71251076, y: 0.000000040278376, z: -0.70166117, w: 0.000000017502774}
   m_LocalPosition: {x: 0.105956554, y: 1.4434243, z: 0.04465419}
-  m_LocalScale: {x: 107.63143, y: 107.631424, z: 107.63142}
+  m_LocalScale: {x: 107.631424, y: 107.631424, z: 107.63141}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1555682226}
+  m_Father: {fileID: 379565395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4968947163309195283
 Transform:
@@ -8689,10 +8730,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.71251076, y: 0.000000040278376, z: -0.70166117, w: 0.000000017502774}
   m_LocalPosition: {x: 0.105956554, y: 1.4434243, z: 0.04465419}
-  m_LocalScale: {x: 107.63143, y: 107.631424, z: 107.63142}
+  m_LocalScale: {x: 107.631424, y: 107.631424, z: 107.63141}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1555682226}
+  m_Father: {fileID: 379565395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6284040601091165606
 MeshFilter:
@@ -9201,10 +9242,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.71251076, y: 0.000000040278376, z: -0.70166117, w: 0.000000017502774}
   m_LocalPosition: {x: 0.105956554, y: 1.4434243, z: 0.04465419}
-  m_LocalScale: {x: 107.63143, y: 107.631424, z: 107.63142}
+  m_LocalScale: {x: 107.631424, y: 107.631424, z: 107.63141}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1555682226}
+  m_Father: {fileID: 379565395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6794039076333694710
 MeshRenderer:

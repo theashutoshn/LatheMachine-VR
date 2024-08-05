@@ -11,7 +11,16 @@ public class StartMachine : GenericSteps
     public GameObject pushButton;
     private int rotationSpeed = 500;
     public GameObject firstWood;
-    public GameObject SecondWood;
+    public GameObject secondWood;
+    public GameObject thirdWood;
+    public GameObject fourthWood;
+    public GameObject fifthWood;
+    public GameObject sixthWood;
+    public GameObject seventhWood;
+    public GameObject eightWood;
+    public GameObject ninthWood;
+    public GameObject tenthWood;
+    public GameObject eleventhWood;
     public GameObject firstWoodSocket;
     public GameObject spindle;
     [SerializeField] private bool isRotating = false;
@@ -33,7 +42,16 @@ public class StartMachine : GenericSteps
         {
             firstWoodSocket.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
             spindle.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
-            SecondWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            secondWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            thirdWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            fourthWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            fifthWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            sixthWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            seventhWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            eightWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            ninthWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            tenthWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+            eleventhWood.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
         }
     }
 
