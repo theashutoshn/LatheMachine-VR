@@ -75,8 +75,8 @@ public class StartMachine : GenericSteps
     public void NoRotateWoood()
     {
         isRotating = false;
-        EventManager.onStepCompleteInvoke();
         Debug.Log("Step 8 Completed");
+        EventManager.onStepCompleteInvoke();
     }
 
 }

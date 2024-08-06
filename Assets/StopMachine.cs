@@ -9,11 +9,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class StopMachine : GenericSteps
 {
     public GameObject stopButton;
-
-    public void Start()
-    {
-        
-    }
     public override void CustomStart()
     {
         stopButton.GetComponent<XRSimpleInteractable>().enabled = true;
